@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .first{
+            background-image: url(netflixbackgroundimage.jpg);
+            background-blend-mode: multiply;
+            background-color: rgba(0, 0, 0, 0.7);
+            height: 715px;
+            width: 1536px;
+        }
+        .nav .netflixlogo{
+            height: 175px;
+            width: 150px;
+            margin: -45px 0 0 160px;
+        }
+        .nav .sign-in{
+            border: none;
+            margin-left: 970px;
+            background-color: rgb(229,9,20);
+            height: 35px;
+            width: 80px;
+            color: white;
+            font-size: 15px;
+            border-radius: 8px;
+            margin: 20px 0 0 970px ;
+            
+        }
+        .nav{
+            display: flex;
+        }
+        .main{
+            color: white;
+            text-align: center;
+        }
+        .main h1{
+            font-size: 55px;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 130px 0 0 0;
+        }
+        .main p{
+            font-size: 24px;
+            margin: 25px 0 0 0 ;
+        }
+        .main input{
+            width: 250px;
+            height: 50px;
+            padding: 0 0 0 20px;
+            border-radius: 9px;
+            margin: 35px 0 0 0;
+            color: white;
+            border: 1px solid white;
+            outline: none;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .main button{
+            height: 50px;
+            width: 190px;
+            background-color: rgb(229,9,20);
+            border-radius: 9px;
+            font-size: 24px;
+            border: none;
+            color: white;
+        }
+        .second{
+            background-color: black;
+            height: 550px;
+            display: flex;
+            margin: 5px 0 0 0;
+        }
+        .content{
+            color: white;
+        }
+        .content h1{
+            text-align: left;
+            padding: 200px 0 0 180px ;
+            font-size: 48px;
+            font-weight: 900px;
+        }
+        .content p{
+            padding: 16px 0 0 180px;
+            font-size: 24px;
+        }
+        .tv img{
+            height: 400px;
+            margin: 50px 0 0 70px;
+        }
+        .third{
+            background-color: black;
+            height: 550px;
+            display: flex;
+            margin: 5px 0 0 0;
+        }
+        .mobile img{
+            height: 400px;
+            margin: 60px 0 0 180px;
+        }
+        .content1 h1{
+            color: white;
+            padding: 180px 0 0 30px;
+            font-size: 48px;
+        }
+        .content1 p{
+            color: white;
+            padding: 0 0 0 30px;
+            font-size: 24px;
+        }
+        .fourth{
+            height: 400px;
+            background-color: black;
+            margin: 5px 0 0 0;
+        }
+        .fourth h1{
+            font-size: 48px;
+            color: white;
+            padding: 100px 0 0 330px;
+        }
+        .fourth p{
+            color: white;
+            font-size: 24px;
+            padding: 0 0 0 330px;
+        }
+        .fifth{
+            background-color: black;
+            height: 550px;
+            display: flex;
+            margin: 5px 0 0 0;
+        }
+        .kid img{
+            height: 400px;
+            margin: 50px 0 0 200px;
+        }
+        .content2 h1{
+            color: white;
+            padding: 170px 0 0 20px;
+            font-size: 48px;
+        }
+        .content2 p{
+            color: white;
+            font-size: 24px;
+            padding: 10px 0 0 20px;
+        }
+        .sixth{ 
+            background-color: black;
+            margin: 5px 0 0 0;
+            height: 1000px;
+        }
+        .sixth h1{
+            color: white;
+            text-align: center;
+            padding: 50px 0 0 0;
+            font-size: 48px;
+        }
+        .buttons button{
+            height: 90px;
+            margin: 20px 0 0 170px;
+            width: 1150px;
+            background-color: rgb(45,45,45);
+            border: none;
+            font-size: 24px;
+            color: white;
+            padding: 24px;
+            text-align: left;
+        }
+        .text{
+            background-color: rgb(45, 45, 45);
+            margin: 2px 0 0 170px;
+            width: 1130px;
+            font-size: 24px;
+            padding: 10px 0 20px 20px;
+            line-height: normal;
+            display: none;
+        }
+        .text p{
+            color: white;
+        }
+        .buttons:focus-within .text{
+            display: block;
+        }
+        .button1 button{
+            height: 90px;
+            margin: 10px 0 0 170px;
+            width: 1150px;
+            background-color: rgb(45,45,45);
+            border: none;
+            font-size: 24px;
+            color: white;
+            padding: 24px;
+            text-align: left;
+        }
+        .text1{
+            background-color: rgb(45, 45, 45);
+            margin: 2px 0 0 170px;
+            width: 1130px;
+            font-size: 24px;
+            padding: 10px 0 20px 20px;
+            line-height: normal;
+            display: none;
+        }
+        .text1 p{
+            color: white;
+        }
+        .button1:focus-within .text1{
+            display: block;
+        }
+        .button2 button{
+            height: 90px;
+            margin: 10px 0 0 170px;
+            width: 1150px;
+            background-color: rgb(45,45,45);
+            border: none;
+            font-size: 24px;
+            color: white;
+            padding: 24px;
+            text-align: left;
+        }
+        .text2{
+            background-color: rgb(45, 45, 45);
+            margin: 2px 0 0 170px;
+            width: 1130px;
+            font-size: 24px;
+            padding: 10px 0 20px 20px;
+            line-height: normal;
+            display: none;
+        }
+        .text2 p{
+            color: white;
+        }
+        .button2:focus-within .text2{
+            display: block;
+        }
+        .button3 button{
+            height: 90px;
+            margin: 10px 0 0 170px;
+            width: 1150px;
+            background-color: rgb(45,45,45);
+            border: none;
+            font-size: 24px;
+            color: white;
+            padding: 24px;
+            text-align: left;
+        }
+        .text3{
+            background-color: rgb(45, 45, 45);
+            margin: 2px 0 0 170px;
+            width: 1130px;
+            font-size: 24px;
+            padding: 10px 0 20px 20px;
+            line-height: normal;
+            display: none;
+        }
+        .text3 p{
+            color: white;
+        }
+        .button3:focus-within .text3{
+            display: block;
+        }
+        .button4 button{
+            height: 90px;
+            margin: 10px 0 0 170px;
+            width: 1150px;
+            background-color: rgb(45,45,45);
+            border: none;
+            font-size: 24px;
+            color: white;
+            padding: 24px;
+            text-align: left;
+        }
+        .text4{
+            background-color: rgb(45, 45, 45);
+            margin: 2px 0 0 170px;
+            width: 1130px;
+            font-size: 24px;
+            padding: 10px 0 20px 20px;
+            line-height: normal;
+            display: none;
+        }
+        .text4 p{
+            color: white;
+        }
+        .button4:focus-within .text4{
+            display: block;
+        }
+        .button5 button{
+            height: 90px;
+            margin: 10px 0 0 170px;
+            width: 1150px;
+            background-color: rgb(45,45,45);
+            border: none;
+            font-size: 24px;
+            color: white;
+            padding: 24px;
+            text-align: left;
+        }
+        .text5{
+            background-color: rgb(45, 45, 45);
+            margin: 2px 0 0 170px;
+            width: 1130px;
+            font-size: 24px;
+            padding: 10px 0 20px 20px;
+            line-height: normal;
+            display: none;
+        }
+        .text5 p{
+            color: white;
+        }
+        .button5:focus-within .text5{
+            display: block;
+        }
+        .sixth_down_text{
+            color: white;
+            font-size: 24px;
+            padding: 40px 0 0 400px;
+        }
+        .sixth_down{
+            margin: 40px 0 0 450px;
+        }
+        .sixth_down input{
+            height: 20px;
+            width: 400px;
+            border-radius: 9px;
+            border: 1px solid white;
+            background-color: rgb(15,15,15);
+            padding: 24px 16px 8px;
+        }
+        .sixth_down button{
+            padding:12px 24px;
+            margin: 0px 0px 0px 8px;
+            font-size: 24px;
+            background-color: RGB(193, 17, 25);
+            color: white;
+            border-radius: 9px;
+            border: none;
+        }
+        .seventh{
+            background-color: black;
+            width: 100%;
+            height: 400px;
+            margin: 5px 0 0 0;
+        }
+        .contact a{
+            color: rgb(44,39,29);
+            padding: 60px 0 0 9px;
+        }
+        .seventh .lists{
+            display: flex;
+            /* justify-content:space-evenly; */
+            padding: 90px 0 0 100px;
+            line-height: 50px;
+        }
+        .lists a{
+            color: white;
+        }
+        .lists li{
+            padding: 0 0 0 90px;
+        }
+        .btn{
+            margin: 5px 0 0 190px;
+        }
+        .btn button{
+            width: 110px;
+            height: 30px;
+            background-color: rgb(15,15,15);
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+        .btn p{
+            color: white;
+            padding: 10px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="first">
+        <div class="nav">
+            <img class="netflixlogo" src="netflix .png" alt="">
+            <button class="sign-in" onclick="">Sign In</button>
+        </div>
+        <div class="main">
+            <h1>Unlimited movies, TV shows, and more</h1>
+            <p>Watch anywhere. Cancel anytime.</p>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <input type="email" placeholder="Email address">
+            <button>Get Started ></button>
+        </div>
+    </div>
+    <div class="second">
+        <div class="content">
+            <h1>Enjoy on your TV</h1>
+            <p>Watch on Smart TVs, Playstation, Xbox, Chromecast,<br>Apple TV, Blu-ray players, and more.</p>
+        </div>
+        <div class="tv">
+            <img src="tv.png" alt="">
+        </div>
+    </div>
+    <div class="third">
+        <div class="mobile">
+            <img src="mobile-0819.jpg" alt="">
+        </div>
+        <div class="content1">
+            <h1>Download your shows to<br> watch offline</h1>
+            <p>Save your favorites easily and always<br>have something to watch.</p>
+        </div>
+    </div>
+    <div class="fourth">
+        <h1>Watch<br>everywhere</h1>
+        <p>Stream unlimited movies and TV <br>shows on your phone, tablet, laptop,<br>and TV.</p>
+    </div>
+    <div class="fifth">
+        <div class="kid">
+            <img src="kid.png" alt="">
+        </div>
+        <div class="content2">
+            <h1>Create profiles for kids</h1>
+            <p>Send kids on adventures with their favorite<br>characters in a space made just for them—free with,<br>your membership.</p>
+        </div>
+    </div>
+    <div class="sixth">
+        <h1>Frequently Asked Questions</h1>
+        <div class="buttons">
+            <button>What is Netflix</button>
+            <div class="text">
+                <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime,<br> documentaries, and more on thousands of internet-connected devices.<br><br>You can watch as much as you want, whenever you want without a single commercial – all for one low<br>monthly price. There's always something new to discover and new TV shows and movies are added every<br>week!</p>
+            </div>
+        </div>
+        <div class="button1">
+            <button>How much does Netflix cost?</button>
+            <div class="text1">
+                <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed<br>monthly fee. Plans range from ₦1,200 to ₦4,400 a month. No extra costs, no contracts.</p>
+            </div>
+        </div>
+        <div class="button2">
+            <button>Where can I watch?</button>
+            <div class="text2">
+                <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com<br>from your personal computer or on any internet-connected device that offers the Netflix app, including<br>smart TVs, smartphones, tablets, streaming media players and game consoles.<br><br>You can also download your favorite shows with the iOS, Android, or Windows 10 app. Use downloads<br>to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
+            </div>
+        </div>
+        <div class="button3">
+            <button>How do I cancel?</button>
+            <div class="text3">
+                <p>Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your<br>account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+            </div>
+        </div>
+        <div class="button4">
+            <button>What can I watch on Netflix?</button>
+            <div class="text4">
+                <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning<br>Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+            </div>
+        </div>
+        <div class="button5">
+            <button>Is Netflix good for kids?</button>
+            <div class="text5">
+                <p>The Netflix Kids experience is included in your membership to give parents control while kids enjoy<br>family-friendly TV shows and movies in their own space.<br><br>Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of<br>content kids can watch and block specific titles you don’t want kids to see.</p>
+            </div>
+        </div>
+        <p class="sixth_down_text">Ready to watch? Enter your email to create or restart your membership.</p>
+        <div class="sixth_down">
+            <input type="email" placeholder="Email address">
+            <button>Get Started ></button>
+        </div>
+    </div>
+    <div class="seventh">
+        <div class="q">
+            
+        </div>
+        <div class="lists">
+            <div class="1">
+                <ul>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Investor Relations</a></li>
+                    <li><a href="">Privacy</a></li>
+                    <li><a href="">Speed Test</a></li>
+                </ul>
+            </div>
+            <div class="2">
+                <ul>
+                    <li><a href="">Help Center</a></li>
+                    <li><a href="">Jobs</a></li>
+                    <li><a href="">Cookie Preference</a></li>
+                    <li><a href="">Legal Notice</a></li>
+                </ul>
+            </div>
+            <div class="3">
+                <ul>
+                    <li><a href="">Accounts</a></li>
+                    <li><a href="">Ways to Watch</a></li>
+                    <li><a href="">Corporate Information</a></li>
+                    <li><a href="">Only on Netflix</a></li>
+                </ul>
+            </div>
+            <div class="4">
+                <ul>
+                    <li><a href="">Media Center</a></li>
+                    <li><a href="">Terms of Use</a></li>
+                    <li><a href="">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="btn">
+            <button>English</button>
+            <p>Netflix Nigeria</p>
+        </div>
+    </div>
+</body>
+</html>
